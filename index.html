@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jogo da Velha</title>
+</head>
+<body>
+    <h1>Jogo da Velha</h1>
+    <div class="board">
+        <!-- Nove células para o tabuleiro -->
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+
+    <div class="info">
+        <button id="reset-button">Reiniciar Jogo</button>
+        <div id="score">
+            <!-- Contagem de pontos para os jogadores e empates -->
+            <span>Jogador: <span id="player-x-score">0</span></span>
+            <span>Computador: <span id="player-o-score">0</span></span>
+            <span>Empates: <span id="draw-score">0</span></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
