@@ -173,7 +173,7 @@ function computerMove() {
         }
 
         // Caso contrário, utilize a busca Minimax para calcular a pontuação
-        const score = minimax(tempBoard, 0, false, 8);
+        const score = minimax(tempBoard, 0, false, 20);
         if (score > bestScore) {
             bestScore = score;
             bestMove = index;
