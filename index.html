@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Jogo da Velha</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Jogo da Velha</h1>
-    <div class="board">
-        <!-- Nove células para o tabuleiro -->
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
+  <main class="container">
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="theme-switch">
+        <span class="slider round"></span>
+      </label>
     </div>
+    <h1>Jogo da Velha <i class="fas fa-gamepad"></i></h1>
+
+    <section class="board" id="board">
+      <!-- 9 células do tabuleiro -->
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </section>
 
     <div class="info">
-        <button id="reset-button">Reiniciar Jogo</button>
-        <div id="score">
-            <!-- Contagem de pontos para os jogadores e empates -->
-            <span>Jogador: <span id="player-x-score">0</span></span>
-            <span>Computador: <span id="player-o-score">0</span></span>
-            <span>Empates: <span id="draw-score">0</span></span>
-        </div>
-    </div>
+      <button id="reset-button">Reiniciar Jogo <i class="fas fa-redo"></i></button>
+    
+      <div class="difficulty-select">
+        <label for="difficulty"><i class="fas fa-cogs"></i> Dificuldade:</label>
+        <select id="difficulty">
+          <option value="easy">Fácil</option>
+          <option value="hard">Difícil</option>
+        </select>
+      </div>
+    
+      <button id="reset-score">Zerar Placar <i class="fas fa-trash-alt"></i></button>
+    
+      <div id="score">
+        <p><i class="fas fa-user"></i> Jogador (X): <span id="player-x-score">0</span></p>
+        <p><i class="fas fa-robot"></i> Computador (O): <span id="player-o-score">0</span></p>
+        <p><i class="fas fa-balance-scale"></i> Empates: <span id="draw-score">0</span></p>
+      </div>
+    </div>    
+  </main>
 
-    <script src="script.js"></script>
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2 id="modal-message"></h2>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
