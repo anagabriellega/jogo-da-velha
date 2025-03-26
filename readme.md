@@ -25,8 +25,8 @@ Um jogo da velha moderno, estiloso, com tema claro/escuro, níveis de dificuldad
 
 # 🧪 Como rodar localmente
 
-  - # Clone o repositório
+  -  Clone o repositório
   - git clone https://github.com/anagabriellega/jogo-da-velha.git
-  - # Acesse a pasta
+  - Acesse a pasta 
   - cd jogo-da-velha
-  - # Abra o index.html no navegador
+  - Abra o index.html no navegador
